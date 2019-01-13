@@ -7,8 +7,8 @@ permalink:           pretty
 title:               Computer Science and Math notes
 tagline:             'powered by coffee and whiteboard'
 description:         'Notes on CS made by an independent learner. Want to discuss something? Here we go: <a href="https://t.me/slonecznik">Telegram</a>, <a href="https://github.com/sonfl">Github</a>'
-url:                 'https://sonfl.github.io'
-baseurl:             '/CS'
+url:                 https://sonfl.github.io
+baseurl:             /CS
 plugins: [jekyll-paginate]
 paginate:            5
 paginate_path: "page:num"
