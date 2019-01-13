@@ -1,2 +1,20 @@
-theme: jekyll-theme-midnight
-title: CS
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+title:               Computer Science and Math notes
+tagline:             'powered by coffee and whiteboard'
+description:         'Notes on CS made by an independent learner. Want to discuss something? Here we go: <a href="https://t.me/slonecznik">Telegram</a>, <a href="https://github.com/sonfl">Github</a>'
+url:                 
+baseurl:             'CS/'
+plugins: [jekyll-paginate]
+paginate:            5
+paginate_path: "page:num"
+
+# About/contact
+author:
+  name:              Volodymyr Yanushevskyi
+  url:               https://github.com/sonfl
+  email:             yanushvy@gmail.com

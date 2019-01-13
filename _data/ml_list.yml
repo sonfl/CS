@@ -1,0 +1,172 @@
+toc:
+
+  - title: Lecture 2 (Supervised Learning Setup. Linear Regression)
+    subfolderitems:
+      - page: Notes
+        url: /machine-learning/mlnotes2
+      - page: Questions
+        url: /ml_tab/mlquestions2
+      - page: Problem set
+        url: /ml_tab/mlps2
+
+  - title: Lecture 3 (Weighted Least Squares. Logistic Regression. Netwon's Method)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes3
+      - page: Questions
+        url: /ml_tab/mlquestions3
+      - page: Problem set
+        url: /ml_tab/mlps3
+
+  - title: Lecture 4 (Perceptron. Exponential Family. Generalized Linear Models)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes4
+      - page: Questions
+        url: /ml_tab/mlquestions4
+      - page: Problem set
+        url: /ml_tab/mlps4
+
+  - title: Lecture 5 (Gaussian Discriminant Analysis. Naive Bayes)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes5
+      - page: Questions
+        url: /ml_tab/mlquestions5
+      - page: Problem set
+        url: /ml_tab/mlps5
+
+  - title: Lecture 6 (Laplace Smoothing. Support Vector Machines)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes6
+      - page: Questions
+        url: /ml_tab/mlquestions6
+      - page: Problem set
+        url: /ml_tab/mlps6
+
+  - title: Lecture 7 (Support Vector Machines. Kernels)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes7
+      - page: Questions
+        url: /ml_tab/mlquestions7
+      - page: Problem set
+        url: /ml_tab/mlps7
+
+  - title: Lecture 8 (Bias-Variance tradeoff. Regularization and model/feature selection)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes8
+      - page: Questions
+        url: /ml_tab/mlquestions8
+      - page: Problem set
+        url: /ml_tab/mlps8
+
+  - title: Lecture 9 (Tree Ensembles)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes9
+      - page: Questions
+        url: /ml_tab/mlquestions9
+      - page: Problem set
+        url: /ml_tab/mlps9
+
+  - title: Lecture 10 (Neural Networks - Basics)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes10
+      - page: Questions
+        url: /ml_tab/mlquestions10
+      - page: Problem set
+        url: /ml_tab/mlps10
+
+  - title: Lecture 11 (Neural Networks - Training)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes11
+      - page: Questions
+        url: /ml_tab/mlquestions11
+      - page: Problem set
+        url: /ml_tab/mlps11
+
+  - title: Lecture 12 (Practical Advice for ML projects)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes12
+      - page: Questions
+        url: /ml_tab/mlquestions12
+      - page: Problem set
+        url: /ml_tab/mlps12
+
+  - title: Lecture 13 (K-means. Mixture of Gaussians. Expectation Maximization)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes13
+      - page: Questions
+        url: /ml_tab/mlquestions13
+      - page: Problem set
+        url: /ml_tab/mlps13
+
+  - title: Lecture 14 (Factor Analysis)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes14
+      - page: Questions
+        url: /ml_tab/mlquestions14
+      - page: Problem set
+        url: /ml_tab/mlps14
+
+  - title: Lecture 15 (Principal Component Analysis. Independent Component Analysis)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes15
+      - page: Questions
+        url: /ml_tab/mlquestions15
+      - page: Problem set
+        url: /ml_tab/mlps15
+
+  - title: Lecture 16 (MDPs. Bellman Equations)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes16
+      - page: Questions
+        url: /ml_tab/mlquestions16
+      - page: Problem set
+        url: /ml_tab/mlps16
+
+  - title: Lecture 17 (Value Iteration and Policy Iteration. LQR. LQG)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes17
+      - page: Questions
+        url: /ml_tab/mlquestions17
+      - page: Problem set
+        url: /ml_tab/mlps17
+
+  - title: Lecture 18 (Q-Learning. Value function approximation)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes18
+      - page: Questions
+        url: /ml_tab/mlquestions18
+      - page: Problem set
+        url: /ml_tab/mlps18
+
+  - title: Lecture 19 (Policy Search. REINFORCE. POMDPs)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes19
+      - page: Questions
+        url: /ml_tab/mlquestions19
+      - page: Problem set
+        url: /ml_tab/mlps19
+
+  - title: Lecture 20 (POMDPs, policy search, and Pegasus in the context of reinforcement learning)
+    subfolderitems:
+      - page: Notes
+        url: /ml_tab/mlnotes20
+      - page: Questions
+        url: /ml_tab/mlquestions20
+      - page: Problem set
+        url: /ml_tab/mlps20
