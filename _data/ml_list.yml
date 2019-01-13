@@ -1,6 +1,12 @@
+base_path: /machine-learning
+notes_path: /mlnotes
+questions_path: /mlquestions
+ps_path: /mlps
+
 toc:
 
   - title: Lecture 2 (Supervised Learning Setup. Linear Regression)
+    number: 2
     subfolderitems:
       - page: Notes
         url: /machine-learning/mlnotes2

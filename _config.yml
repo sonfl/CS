@@ -13,6 +13,7 @@ plugins: [jekyll-paginate]
 paginate:            5
 paginate_path: "page:num"
 
+
 # About/contact
 author:
   name:              Volodymyr Yanushevskyi
