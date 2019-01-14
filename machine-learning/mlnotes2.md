@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Lecture 2
 mathjax: true
 ---
 $\theta$ is a parameter,
