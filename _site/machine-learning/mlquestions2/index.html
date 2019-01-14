@@ -121,53 +121,16 @@
       </div>
 
       <div class="container content">
-        <p>$\theta$ is a parameter,
-$x$ is an input variable,
-$y$ is an output variable,
-$\alpha$ is a learning rate(arbitrary)</p>
+        <p class="message">
+1) How does the $\frac{1}{2}$ in $ J(\theta) = min_{\theta}\frac{1}{2}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^{2}$ affect the final result, since we put it there just to "make our calculations easier"?
+</p>
+<p>Since later on we introduce $\alpha$ (which we choose whatever we want), we can observe that $\alpha_{1} = \alpha \frac{1}{2}$
+—–</p>
 
-<p>Simple linear regression function:</p>
-
-<script type="math/tex; mode=display">h(x) = \sum_{i=0}^{n}\theta_{i}x_{i} = \theta^{T}x</script>
-
-<p>Let’s define the error function as least squares:</p>
-
-<script type="math/tex; mode=display">J(\theta) = min_{\theta}\frac{1}{2}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^{2}</script>
-
-<p>Since $J(\theta)$ is a convex function(see Questions), we will get such a gradient descent:</p>
-
-<script type="math/tex; mode=display">\theta_{i} := \theta_{i} - \alpha\frac{\partial}{\partial\theta_{i}}J(\theta)</script>
-
-<p>Let’s derive $\frac{\partial}{\partial\theta_{i}}J(\theta)$ for only one training example:</p>
-
-<script type="math/tex; mode=display">\frac{\partial}{\partial\theta_{i}}J(\theta) =\frac{\partial}{\partial\theta_{i}}\frac{1}{2}(h_{\theta}(x)-y)^{2} =</script>
-
-<script type="math/tex; mode=display">=2\frac{1}{2}(h_{\theta}(x)-y)\frac{\partial}{\partial\theta_{i}}(h_{\theta}(x)-y) =</script>
-
-<script type="math/tex; mode=display">=(h_{\theta}(x)-y)\frac{\partial}{\partial\theta_{i}}(\theta_{0}x_{0}+...+\theta_{n}x_{n}-y) =(h_{\theta}(x)-y)x_{i}</script>
-
-<p>We can transform it to the matrix form, given:</p>
-
-<p>$\nabla_{\theta}J = \begin{pmatrix}\frac{\partial J}{\partial\theta_{0}} \\ \vdots \\ \frac{\partial J}{\partial\theta_{n}}\end{pmatrix} \in \mathbb{R}^{n+1}$, then $\Theta = \Theta - \alpha \nabla_{\theta}J$</p>
-
-<p>$X\Theta = \begin{pmatrix}(x^{(1)})^{T} \\ \vdots \\ x^{(m)})^{T}\end{pmatrix}\Theta$ , 
-$X\Theta = \begin{pmatrix}(x^{(1)})^{T}\Theta \\ \vdots \\ (x^{(m)})^{T}\Theta\end{pmatrix} = \begin{pmatrix} h_{\theta}(x^{(1)}) \\ \vdots \\ h_{\theta}(x^{(m)})\end{pmatrix}$</p>
-
-<p>$X\Theta - y = \begin{pmatrix} h(x^{(1)}) - y^{(1)} \\ \vdots \\ h(x^{(m)}) - y^{(m)}\end{pmatrix}$</p>
-
-<p>Since $z^{T}z = \sum_{i}z_{i}^{2}$, then</p>
-
-<p>$\frac{1}{2}(X\Theta - y)^{T}(X\Theta - y) = \frac{1}{2}\sum_{i=1}^m((x^{(i)}) - y^{(i)})^{2}) = J(\Theta)$</p>
-
-<p>If we <a href="http://cs229.stanford.edu/notes/cs229-notes1.pdf">skip some steps of moving stuff around</a>, we get:</p>
-
-<p>$\nabla_{\theta} J(\Theta) = X^{T}X\Theta - X^{T}y = 0$</p>
-
-<p>$X^{T}X\Theta = X^{T}y$</p>
-
-<p>$\boxed{\Theta = (X^{T}X)^{-1}X^{T}y}$</p>
-
-<p>All interesting questions see in the Questions section!</p>
+<p class="message">
+2) What are the alternatives to the square error method?
+</p>
+<p><img src="public/line-fit-errors.png" alt="image" class="img-responsive" /></p>
 
       </div>
     </div>
