@@ -30,6 +30,34 @@
 </head>
 
   
+<script>
+function cvonk_ResizeMathJax() {
+    jQuery('.MathJax_Display').each(function(ii, obj) {
+        var latex = obj.children[0];
+        var w = latex.offsetWidth;
+        var h = latex.offsetHeight;    
+        var W = obj.offsetWidth;
+        if (w > W) {
+            obj.style.fontSize = 95 * W / w + "%";
+        }
+    });
+}
+window.MathJax = {
+    AuthorInit: function() {
+    MathJax.Hub.Register.StartupHook("Begin", function() {
+        MathJax.Hub.Queue(function() {
+        cvonk_ResizeMathJax();
+        });
+    });
+    },
+    jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+    extensions: ["tex2jax.js"]
+};
+window.addEventListener("resize", function() {
+    cvonk_ResizeMathJax();  
+});
+</script>
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -39,9 +67,6 @@
     "HTML-CSS": {
         styles: {".MathJax": {
           color: "#033 ! important"}
-                  },
-                  ".MathJax_Display": {
-                    display:"table"
                   }
     }
   });
@@ -57,16 +82,6 @@
   charset="utf-8"
   src="https://vincenttam.github.io/javascripts/MathJaxLocal.js"
 >
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    "SVG": {linebreaks: { automatic: true }}
-  });
-window.addEventListener('resize', MJrerender);
-function MJrerender(){
-MathJax.Hub.Queue(["Rerender",MathJax.Hub])
-};
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_SVG-full"></script>
 
 </script>
 
