@@ -94,15 +94,16 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 .masthead {
+  margin-left: 0;
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
 }
 .masthead-title {
-  width=50%;
   margin-top: 0;
   margin-bottom: 0;
+  
   color: #505050;
 }
 .masthead-title a {
