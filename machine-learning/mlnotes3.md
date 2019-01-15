@@ -3,6 +3,8 @@ layout: default
 mathjax: true
 ---
 
+> Some of the missed steps in calculations might be in the Questions section. Or might not...
+
 "Parametric" learning algorithm
     - $\theta$'s fixed set of parameters
 "Non-parametric" learning algorithm

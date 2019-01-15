@@ -2,6 +2,8 @@
 layout: default
 mathjax: true
 ---
+> Some of the missed steps in calculations might be in the Questions section. Or might not...
+
 $\theta$ is a parameter,
 $x$ is an input variable,
 $y$ is an output variable,

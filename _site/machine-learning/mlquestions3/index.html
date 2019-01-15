@@ -141,8 +141,17 @@ MathJax.Hub.Queue(["Rerender",MathJax.Hub])
       </div>
 
       <div class="container content">
-        <p>For that lecture there is no problem set tasks.<br />
-<a href="https://youtu.be/NVC1w4_ulzI">Maybe that interesting off-topic video would make up for it!</a></p>
+        <p class="message">
+Why do we need weighted linear regression?
+</p>
+<p>You must have heard about underfitting and overfitting. As Andrew describes it, it’s a bad idea to used too much parameters (and too few also). WLR proposes another way to look at the problem by adding the $w^{(i)}$ function, which will yield ~1 when $|x^{(i)}-x|$ is small and ~0 when $|x^{(i)}-x|$ is big.</p>
+
+<hr />
+
+<p class="message">
+Why do we initially maximize $L(\theta)$ but then transform into $l(\theta)=logL(\theta)$ and don't reverse back?
+</p>
+<p>Because we minimize the parameter $\theta$. The maximum value for $L(\theta)$ and $l(\theta)$ will differ indeed. But since log is a strictly increasing function, the $\theta$ itself will be the same for both functions.</p>
 
       </div>
     </div>
