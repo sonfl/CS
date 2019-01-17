@@ -11,7 +11,7 @@
 
   <title>
     
-      Computer Science and Math notes &middot; powered by coffee and whiteboard
+       &middot; Computer Science and Math notes
     
   </title>
 
@@ -161,20 +161,63 @@ window.addEventListener("resize", function() {
       </div>
 
       <div class="container content">
-        <!-- <div class="pagination">
-  
-    <span class="pagination-item older">Older</span>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
+        <p>Let’s remind ourselves Newton’s method:</p>
 
-</div> -->
- 
+<script type="math/tex; mode=display">\theta^{(t+1)} = \theta^{(t)} - \frac{f(\theta^{(t)})}{f'(\theta^{(t)})}</script>
 
- <h3>Currently it's under development, so skip ahead to the ML section!
- </h3>
+<p>So we may use it to maxime the value of $l(\theta)$ by finding such $\theta$ s.t. $l’(\theta) = 0$</p>
 
+<p>Time to bring the infinite dimensions:</p>
+
+<p><script type="math/tex">\theta^{(t+1)} = \theta^{(t)} - H^{-1}\nabla_{\theta}l</script>,</p>
+
+<p>where $H^{-1}$ is an inverse of Hessian matrix.</p>
+
+<p>Generalized Linear Models:</p>
+
+<p>Recall that for $P(y\vert x;\theta)$ for $y \in \mathbb{R}$: Gaussian -&gt; Least squares method 
+$y \in \{ 0 , 1\}$: Bernoulli -&gt; Logistic regression.</p>
+
+<p>So where does $\frac{1}{1+e^{-z}}$ comes from? The answer comes from GLM, which can be written in a from:</p>
+
+<p><script type="math/tex">P(y;\eta) = b(y) e^{\eta^{T}T(y) - a(\eta)}</script>, where</p>
+
+<p>$\eta$ - natural parameter
+$T(y)$ - sufficient statistic (Usually T(y)=y)</p>
+
+<p>Let’s show that Linear and Logistic regressions are special cases of the form above.</p>
+
+<p>Start with Bernoulli:</p>
+
+<p>$Ber(\phi)$: $P(y=1; \theta) = \theta$</p>
+
+<p>$P(y;\phi) = \phi^{y}(1-\phi)^{1-y} = e^{log\phi^{y}(1-\phi)^{1-y}}$
+$ = e^{y log\phi+(1-y)(1-\phi)} = e^{log{\frac{\phi}{1-\phi}} y + log(1-\phi)}$, where</p>
+
+<p>$y$ is $T(y)$</p>
+
+<p>$b(y)=1$</p>
+
+<p>$ log(1-\phi)$ is $-a(\eta)$</p>
+
+<p>$\eta = log{\frac{\phi}{1-\phi}} \rightarrow \phi = \frac{1}{1+e^{-\eta}}$</p>
+
+<p>And now with Gaussian:</p>
+
+<p>Since (as stated in previous lecture) $\sigma^{2}$ doesn’t affect the maximum likelihood, we will set it equal to 1. (But there is a broader generalization of GLM, which deals with one more parameter: dispersion. This would be mentioned later in this course).</p>
+
+<p>$P(y;\mu) = \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}(y-\mu)^{2}}$ 
+$=\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y^{2}}e^{\mu y - \frac{1}{2}\mu^{2}}$</p>
+
+<p>So now we can see that:</p>
+
+<p>$T(y) = y$</p>
+
+<p>$b(y)=\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y^{2}}$</p>
+
+<p>$\eta = \mu$</p>
+
+<p>$ a(\eta) = \frac{1}{2}\eta^{2}$</p>
 
 
       </div>
