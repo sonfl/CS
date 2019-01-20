@@ -116,7 +116,7 @@ From that we can get such facts:
 $e^{\eta_{i}} = \frac{\phi_{i}}{\phi_{k}}$
 
 $\phi_{k}e^{\eta_{i}} = \phi_{i}$
-
+ 
 $\phi_{k} \sum_{i=1}^{k}e^{\eta_{i}} = \sum_{i=1}^{k}\phi_{i}=1$
 
 Therefore we can conclude $\phi_{i} = \frac{e^{\eta_{i}}}{\sum_{j=1}^{k}e^{\eta_{j}}}$
