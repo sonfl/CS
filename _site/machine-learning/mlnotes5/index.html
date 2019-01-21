@@ -11,7 +11,7 @@
 
   <title>
     
-      Computer Science and Math notes &middot; powered by coffee and whiteboard
+       &middot; Computer Science and Math notes
     
   </title>
 
@@ -165,20 +165,59 @@ window.addEventListener("resize", function() {
       </div>
 
       <div class="container content">
-        <!-- <div class="pagination">
-  
-    <span class="pagination-item older">Older</span>
-  
-  
-    <span class="pagination-item newer">Newer</span>
-  
+        <p>Generative Learning is an approach to decide whether $x$ is in set 1 or set 2 of data. We do it by means of making the model to predict set 1 and another model to predict set 2. And assign $x$ to the set, where the probability is greater.</p>
 
-</div> -->
- 
+<p>Therefore discriminative are of form: $p(y \vert x)$</p>
 
- <h3>Currently it's under development, so skip ahead to the ML section!
- </h3>
+<p>Generative: $p(x \vert y)$ and $p(y)$</p>
 
+<p>After we model our models(above), we can use Bayes rule to get:</p>
+
+<script type="math/tex; mode=display">p(y \vert x) = \frac{p(x \vert y)p(y)}{p(x)}</script>
+
+<p>where $p(x) = p(x \vert y=1)p(y=1)+p(x \vert y=0)p(y=0)$</p>
+
+<p>The first example of such a learning is</p>
+
+<blockquote>
+  <p>Gaussian discriminant analysis(GDA)</p>
+</blockquote>
+
+<p>In this model we assume that $p(x \vert y) is distributed according to multivariate normal distribution, which is:</p>
+
+<p><script type="math/tex">p(x;\mu,\Sigma) = \frac{1}{(2\pi)^{n/2}\vert \Sigma \vert ^{\frac{1}{2}}}e^{-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)}</script>,</p>
+
+<p>where $\Sigma$ is a covariance matrix</p>
+
+<p>Let’s have an example of GDA:</p>
+
+<p>Our model will be as such:</p>
+
+<p>$ y \sim$ Bernoulli($\phi$)</p>
+
+<p>$x \vert y=0 \sim \mathcal{N}(\mu_{0}, \Sigma)$</p>
+
+<p>$x \vert y=1 \sim \mathcal{N}(\mu_{1}, \Sigma)$</p>
+
+<p>Therefore we have:</p>
+
+<p>$p(y) = \phi^{y}(1-\phi)^{1-y}$</p>
+
+<p>$p(x \vert y=0) = \frac{1}{(2\pi)^{n/2}\vert \Sigma \vert ^{\frac{1}{2}}}e^{-\frac{1}{2}(x-\mu_{0})^{T}\Sigma^{-1}(x-\mu_{0})}$</p>
+
+<p>$p(x \vert y=1) = \frac{1}{(2\pi)^{n/2}\vert \Sigma \vert ^{\frac{1}{2}}}e^{-\frac{1}{2}(x-\mu_{1})^{T}\Sigma^{-1}(x-\mu_{1})}$</p>
+
+<p>And now our dear log likelihood:</p>
+
+<p>$l(\phi, \mu_{0}, \mu_{1}, \Sigma) = log \prod_{i=1}^{m}p(x^{(i)}, y^{(i)}) = log \prod_{i=1}^{m}p(x^{(i)} \vert y^{(i)})p(y^{(i)})$</p>
+
+<p>To predict we need $argmax_{y}P(y \vert x) = argmax_{y}P(x \vert y)P(y)$</p>
+
+<p>Also by some magic steps we can observe that somehow $p(y=1 \vert x; \Sigma, \mu_{0}, \mu_{1}) = \frac{1}{1+e^{-\theta^{T}x}}$, which we used to model $p(y=1 \vert x)$</p>
+
+<p>So when we would prefer GDA over logistic regression and vica versa?</p>
+
+<p>Apparently, if we have multivariate gaussian we get logistical regression, but the converse is not true. So we may think of GDA as a stronger modelling. Therefore it is more efficient. But on the other hand, if we make incorrect assumptions, we would be better off with weaker logistic regression, which would handle all inconsistencies with the data.</p>
 
 
       </div>

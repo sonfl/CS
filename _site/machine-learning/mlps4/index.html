@@ -140,6 +140,8 @@ window.addEventListener("resize", function() {
     
       
     
+      
+    
 
     <!--
     <a class="sidebar-nav-item" href="/archive/v.zip">Download</a>
@@ -165,8 +167,45 @@ window.addEventListener("resize", function() {
       <div class="container content">
         <p><a href="/CS/public/ps1.pdf">The task can be found here.</a></p>
 
-<p>Problem 1: Logistic regression
-    Part (b):</p>
+<p>Problem 2: Poisson regression and the exponential family</p>
+<blockquote>
+  <p>Part (a):</p>
+</blockquote>
+
+<p>$P(y;\lambda) = \frac{e^{-\lambda} \lambda^{y}}{y!}$</p>
+
+<p>$\frac{e^{-\lambda} \lambda^{y}}{y!} = e^{ln(\frac{e^{-\lambda} \lambda^{y}}{y!})}
+= \frac{e^{yln\lambda-\lambda}}{y!}$, where</p>
+
+<p>$b(y)=\frac{1}{y!}$</p>
+
+<p>$\eta=ln\lambda$,  $\lambda = e^{\eta}$</p>
+
+<p>$T(y)=y$</p>
+
+<p>$a(\eta) = e^{\eta}$</p>
+
+<blockquote>
+  <p>Part (b):</p>
+</blockquote>
+
+<p>$g(\eta)=E(T(y);\eta) = E(y;\eta) = \lambda = e^{\eta} = e^{\theta^{T}x}$</p>
+
+<blockquote>
+  <p>Part (c):</p>
+</blockquote>
+
+<p>$logP(y^{i} \vert x^{i};\theta) = log(\frac{e^{\lambda} \lambda^{y}{y!}}) = -\lambda + ylog\lambda - log(y!) = ylog(e^{\theta^{T}x}) - e^{\theta^{T}x} - log(y!)$</p>
+
+<p>$\frac{\partial f}{\partial \theta_{i}} = -x_{i}e^{\theta^{T}x} + yx_{i} = (y-e^{\theta^{T}x})x_{i}$</p>
+
+<p>Therefore stochastic ascend is of the formula:</p>
+
+<p>$\theta_{i+1} = \theta_{i} + \alpha(y-e^{\theta^{T}x})x_{i}$</p>
+
+<blockquote>
+  <p>Part (d):</p>
+</blockquote>
 
 
       </div>
