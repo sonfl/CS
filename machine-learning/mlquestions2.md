@@ -38,3 +38,8 @@ $ 2J(\theta) = \sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^{2} = \sum_{i=1}^{m
 
 Now we can observe that our equation above and the $f(x,y) = ax^2 + by^2 - cxy - dx - ry + m$ are identical. Also we know that $f(x,y)$ is convex, therefore $2J(\theta)$ is also convex
 
+<p class='message'>
+6) Why MSE may be a bad choice?
+</p>
+
+There is no guarantee that the method with the lowest training MSE will also have the lowest test MSE

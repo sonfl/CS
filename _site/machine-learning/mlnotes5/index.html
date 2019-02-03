@@ -217,8 +217,54 @@ window.addEventListener("resize", function() {
 
 <p>So when we would prefer GDA over logistic regression and vica versa?</p>
 
-<p>Apparently, if we have multivariate gaussian we get logistical regression, but the converse is not true. So we may think of GDA as a stronger modelling. Therefore it is more efficient. But on the other hand, if we make incorrect assumptions, we would be better off with weaker logistic regression, which would handle all inconsistencies with the data.</p>
+<p>Apparently, if we have multivariate gaussian we get logistical regression, but the converse is not true. So we may think of GDA as a stronger modelling. Therefore it is more efficient. But on the other hand, if we make incorrect assumptions, we would be better off with a weaker logistic regression, which would handle all inconsistencies with the data.</p>
 
+<blockquote>
+  <p>Naive Bayes</p>
+</blockquote>
+
+<p>Spam filter is a good example of Naive Bayes. Suppose we have a vector $x = \begin{pmatrix} 1 \\ 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}$ where 1 is a presence of some particular word and 0 is its abscence. Then this vector represents a particular mail which we’ll try to classify.</p>
+
+<p>Now we need to model $P(x \vert y)$. Now we will assume that $x_{i}$ is conditionally independent give y (which is rather not true, since if we get a mail where we have a word “Java”, it’s more probable to have other CS-related word), but it still works. This assumption has its name: Naive Bayes assumption.
+$P(x_{1000} \vert y) = P(x_{1000} \vert y, x_{1200})$</p>
+
+<p>(Note it’s not a full independence of events)
+Suppose our dictionary (vector x) has dimension of 50000.</p>
+
+<p><script type="math/tex">P(x_{1},...,x_{50000} \vert y)
+= P(x_{1} \vert y) P(x_{2} \vert y, x_{1}) ... P(x_{50000} \vert y, x_{1}, x_{2},...,x_{49999})</script>
+<script type="math/tex">= P(x_{1} \vert y)P(x_{2} \vert y)...P(x_{50000} \vert y) = \prod_{j=1}^{n}P(x_{j} \vert y)</script></p>
+
+<p>Our model is parameterized by $\phi_{j \vert y=1} = P(x_{j} = 1 \vert y=1)$,$\phi_{j \vert y=0} = P(x_{j} = 1 \vert y=0)$ and $\phi_{y} = P(y=1)$</p>
+
+<p>Then for our training set {$(x{(i)},y^{(i)}); i = 1,…,m$} we can write likelihood:</p>
+
+<script type="math/tex; mode=display">L(\phi_{y=1}, \phi_{j \vert y=1}, \phi_{j \vert y=0}) = \prod_{i=1}^{m}P(x{(i)},y^{(i)})</script>
+
+<p>After maximazing that likelihood we get:</p>
+
+<script type="math/tex; mode=display">\phi_{j \vert y=1} = \frac{\sum_{i=1}^{m}1\{x_{j}^{(i)} = 1 \wedge y^{(i)} = 1\}}{\sum_{i=1}^{m}1\{y^{(i)}=1\}}</script>
+
+<script type="math/tex; mode=display">\phi_{j \vert y=0} = \frac{\sum_{i=1}^{m}1\{x_{j}^{(i)} = 1 \wedge y^{(i)} = 0\}}{\sum_{i=1}^{m}1\{y^{(i)}=0\}}</script>
+
+<script type="math/tex; mode=display">\phi_{y} = \frac{\sum_{i=1}^{m}1\{y^{(i)} = 1\}}{m}</script>
+
+<p>So we can easily compute such a thing:</p>
+
+<p><script type="math/tex">P(y=1 \vert x) = \frac{P(x \vert y=1) P(y=1)}{P(x)}</script> 
+<script type="math/tex">= \frac{(\prod_{j=1}^{n}P(x_{j} \vert y=1)) P(y=1)}{(\prod_{j=1}^{n}P(x_{j} \vert y=1))P(y=1) + (\prod_{j=1}^{n}P(x_{j} \vert y=0))P(y=0)}</script></p>
+
+<p>And then we pick whichever has the higher probability.</p>
+
+<blockquote>
+  <p>Laplace smoothing</p>
+</blockquote>
+
+<p>If we get a new word we’ve never seen before,by our algorithm above, we automatically set $\phi_{y=1} = 0$ and $\phi_{y=0} = 0$ so $P(y=1 \vert x) = \frac{0}{0}$ which is undefined.</p>
+
+<p>To combat an issue we may change a little bit a definition of $\phi_{j}$ to be:</p>
+
+<script type="math/tex; mode=display">\phi_{j} = \frac{\sum_{i=1}^{m}1\{z^{(i)} = j\} + 1}{m + k}</script>
 
       </div>
     </div>
