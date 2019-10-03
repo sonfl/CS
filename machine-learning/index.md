@@ -10,7 +10,6 @@ title: Andrew Ng's Machine Learning
     <h3>{{ item.title}} </h3>
     <ul>
             <li><a href="{{site.baseurl}}{{ site.data.ml_list.base_path}}{{site.data.ml_list.notes_path}}{{item.number}}">Notes</a></li>
-            <li><a href="{{site.baseurl}}{{ site.data.ml_list.base_path}}{{site.data.ml_list.questions_path}}{{item.number}}">Questions</a></li>
             <li><a href="{{site.baseurl}}{{ site.data.ml_list.base_path}}{{site.data.ml_list.ps_path}}{{item.number}}">Problem set</a></li>
     </ul>
 {% endfor %}
