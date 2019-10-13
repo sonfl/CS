@@ -3,7 +3,6 @@ layout: default
 mathjax: true
 ---
 
-> Some of the missed steps in calculations might be in the Questions section. Or might not...
 
 "Parametric" learning algorithm
     - $\theta$'s fixed set of parameters
@@ -36,9 +35,7 @@ So bearing that in mind, we can deduce that every outcome (y in our example) has
 
 So the likelihood function would look like this:
 
-$L(\theta) = P(\vec{y} \vert X;\Theta)
-= \prod_{i=1}^{m}P(y^{(i)} \vert x^{(i)};\theta)
-=\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(y^{(i)} - \theta^{T}x^{(i)})^{2}}{2\sigma^{2}}}$
+$L(\theta) = P(\vec{y} \vert X;\Theta)= \prod_{i=1}^{m}P(y^{(i)} \vert x^{(i)};\theta)=\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(y^{(i)} - \theta^{T}x^{(i)})^{2}}{2\sigma^{2}}}$
 
 To be more clear, we mean likelihood of parameters and probability of data.
 
@@ -46,8 +43,7 @@ Maximum likelihood: choose $\theta$ to maximize $L(\theta)$
 
 To make our lives easier let's introduce 
 
-$l(\theta) = logL(\theta) = 
-log\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}e^{(...)}$
+$l(\theta) = logL(\theta) = log\prod_{i=1}^{m}\frac{1}{\sqrt{2\pi}\sigma}e^{(...)}$
 
 $= \sum_{i=1}^{m}log(\frac{1}{\sqrt{2\pi}\sigma}e^{...}) = mlog\frac{1}{\sqrt{2\pi}\sigma} + \sum_{i=1}^{m}-\frac{(y^{(i)} - \theta^{T}x^{(i)})^{2}}{2\sigma^{2}}$
 

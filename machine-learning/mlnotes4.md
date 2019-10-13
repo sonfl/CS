@@ -33,14 +33,13 @@ Let's show that Linear and Logistic regressions are special cases of the form ab
 
 $Ber(\phi)$: $P(y=1; \theta) = \theta$
 
-$P(y;\phi) = \phi^{y}(1-\phi)^{1-y} = e^{log\phi^{y}(1-\phi)^{1-y}}$
-$ = e^{y log\phi+(1-y)(1-\phi)} = e^{log{\frac{\phi}{1-\phi}} y + log(1-\phi)}$, where
+$P(y;\phi) = \phi^{y}(1-\phi)^{1-y} = e^{log\phi^{y}(1-\phi)^{1-y}}$, $ = e^{y log\phi+(1-y)(1-\phi)} = e^{log{\frac{\phi}{1-\phi}} y + log(1-\phi)}$, where
 
 $y$ is $T(y)$
 
 $b(y)=1$ 
 
-$ log(1-\phi)$ is $-a(\eta)$
+$ log(1 - \phi) $ is $-a(\eta)$
 
 $\eta = log{\frac{\phi}{1-\phi}} \rightarrow \phi = \frac{1}{1+e^{-\eta}}$
 

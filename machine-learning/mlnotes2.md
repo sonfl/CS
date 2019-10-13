@@ -2,7 +2,6 @@
 layout: default
 mathjax: true
 ---
-> Some of the missed steps in calculations might be in the Questions section. Or might not...
 
 $\theta$ is a parameter,
 $x$ is an input variable,
@@ -17,7 +16,7 @@ Let's define the error function as least squares:
 
 $$ J(\theta) = min_{\theta}\frac{1}{2}\sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^{2}$$
 
-Since $J(\theta)$ is a convex function(see Questions), we will get such a gradient descent:
+Since $J(\theta)$ is a convex function, we will get such a gradient descent:
 
 $$ \theta_{i} := \theta_{i} - \alpha\frac{\partial}{\partial\theta_{i}}J(\theta)$$
 
@@ -49,5 +48,3 @@ $\nabla_{\theta} J(\Theta) = X^{T}X\Theta - X^{T}y = 0$
 $X^{T}X\Theta = X^{T}y$
 
 $\boxed{\Theta = (X^{T}X)^{-1}X^{T}y}$
-
-All interesting questions see in the Questions section!
