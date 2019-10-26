@@ -19,7 +19,7 @@ The first example of such a learning is
 
 >Gaussian discriminant analysis(GDA)
 
-In this model we assume that $p(x \vert y) is distributed according to multivariate normal distribution, which is:
+In this model we assume that $p(x \vert y)$ is distributed according to multivariate normal distribution, which is:
 
 $$p(x;\mu,\Sigma) = \frac{1}{(2\pi)^{n/2}\vert \Sigma \vert ^{\frac{1}{2}}}e^{-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)}$$,
 
